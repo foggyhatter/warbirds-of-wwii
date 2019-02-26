@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<!--
+			Student:	David McCracken
+			Assignment:	Project V3
+			Created:	02/12/19
+			
+			Filename: about.html
+		-->
+		<meta name="keywords" content="world war 2, warplanes, airplanes, fighters" />
+		<meta name="author" content="David McCracken" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Warbirds of World War II: About</title>
+		<link href="reset.css" rel="stylesheet" />
+		<link href="layout.css" rel="stylesheet" />
+		<link href="styles.css" rel="stylesheet" />
+		<link href="media.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h1 id="webname">Warbirds of World War II</h1>
+		</header>
+		
+		<nav id="internal" style="text-align:center">
+			<a id="navButton">Navigate</a>
+			<ul>
+				<li><a href="index.html" target="_self">Home</a></li>
+				<li><a href="allies.html" target="_self">The Allies</a></li>
+				<li><a href="axis.html" target="_self">The Axis</a></li>
+				<li id="current_page">About</li>
+			</ul>
+		</nav>
+		
+		<nav id="source">
+			<p>Source sites:</p>
+			<ol>
+				<li><a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a></li>
+				<li><a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a></li>
+				<li><a href="https://ww2db.com" target="_blank">WWII Database</a></li>
+				<li><a href="https://www.archives.gov/" target="_blank">National Archive</a></li>
+				<li><a href="http://www.world-war-2.info" target="_blank">World War 2</a></li>
+			</ol>
+		</nav>
+		
+		<div id="right_side">
+			<figure id="dde_photo">
+				<a href="about.html#DDE_quote"><img src="dde_photo.jpg" alt="Photo of Dwight D. Eisenhower" /></a>
+				<figcaption class="imgsrc"><em>National Archives at College Park [Public domain]</em></figcaption>
+			</figure>
+		</div>
+		
+		<figure id="about_photo">
+			<img src = "AA.gif" alt="US corsairs silhouetted by AA fire" usemap="#corsair_map" />
+			<map name="corsair_map">
+				<area shape="rect" coords="16,175,156,229" href="allies.html#corsair" alt="F4U" />
+				<area shape="rect" coords="194,230,330,267" href="allies.html#corsair" alt="F4U" />
+			</map>
+			<figcaption class="imgsrc"><em>National Archives and Records Administration [Public domain]</em></figcaption>
+		</figure>
+		
+		<article id ="new_features">
+			<h2>Development</h2>
+			<h3>David McCracken
+			<br />CIS 155: Web Develompent I
+			<br />January 20th, 2019</h3>
+			<p>For the first version I added: </p>
+			<ul>
+				<li>&#8226; General <!-- I'm using these dots because it makes more sense given the typewriter font -->
+					<ul>
+						<li>&#8226; A colored header and footer</li>
+						<li>&#8226; A formatted website title</li>
+						<li>&#8226; A list of source websites, to be positioned (tbp)</li>
+						<li>&#8226; A link to a quote from Dwight Eisenhower, tbp</li>
+						<li>&#8226; An internal navigation list, tbp</li>
+						<li>&#8226; Colored base html and body elements</li>
+						<li>&#8226; First-letter formatting for blockquotes</li>
+						<li>&#8226; General formatting rules for the h1, nav, p, article, li, a, and cite elements</li>
+					</ul>
+				</li>
+				<li>&#8226; Home/Index
+					<ul>
+						<li>&#8226; A beginning/placeholder for the short article on WWII aviation</li>
+						<li>&#8226; A photo to be used in the background</li>
+						<li>&#8226; A photo source</li>
+						<li>&#8226; A goofy footer</li>
+					</ul>
+				</li>
+				<li>&#8226; About
+					<ul>
+						<li>&#8226; A photo to be used in the background</li>
+						<li>&#8226; A photo source</li>
+						<li>&#8226; Summary of the additions to the first version of this website</li>
+						<li>&#8226; A quote from Dwight Eisenhower and a link to more info on the former President</li>
+						<li>&#8226; A footer, devoid of gravity</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<h3>David McCracken
+			<br />CIS 155: Web Develompent I
+			<br />February 3rd, 2019</h3>
+			<p>Notes for the second version: </p>
+			<ul>
+				<li>General
+					<ul>
+						<li>&#8226; Created and linked a reset stylesheet</li>
+						<li>&#8226; Created and linked a layout stylesheet</li>
+						<li>&#8226; Added a new font named Handwriting</li>
+						<li>&#8226; Added special effects to the header and footer and the photos </li>
+						<li>&#8226; Replaced the link to Eisenhower's quote with a linked image</li>
+						<li>&#8226; Changed the text for the photos to Handwriting</li>
+						<li>&#8226; Implemented a CSS3 grid</li>
+						<li>&#8226; Added a background image to the html element</li>
+						<li>&#8226; Changed some colors</li>
+						<li>&#8226; Removed the dot style from list elements and replaced it with a special character</li>
+					</ul>
+				</li>
+				<li>Home/Index
+					<ul>
+						<li>&#8226; Moved the bombing photo into a figure box</li>
+					</ul>
+				</li>
+				<li>Allies
+					<ul>
+						<li>&#8226; Added the page</li>
+						<li>&#8226; Added information on three airplanes</li>
+						<li>&#8226; Changed the article element to scroll within the view</li>
+						<li>&#8226; Website I was looking at mysteriously disappeared for a bit</li>
+					</ul>
+				</li>
+				<li>About
+					<ul>
+						<li>&#8226; Added this entry</li>
+						<li>&#8226; Moved the anti-air photo into a figure box</li>
+						<li>&#8226; Added an image map linking to the description of the Corsair to the anti-air photo</li>
+						<li>&#8226; Renamed the h2 heading to "Development"</li>
+						<li>&#8226; Added a background image to Eisenhower's quote</li>
+						<li>&#8226; Changed the font of Eisenhower's quote to Handwriting</li>
+						<li>&#8226; Changed the text in the footer</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<h3>David McCracken
+			<br />CIS 155: Web Develompent I
+			<br />February 19th, 2019</h3>
+			<p>Notes for the third version: </p>
+			<ul>
+				<li>General
+					<ul>
+						<li>&#8226; Created and linked a media stylesheet</li>
+						<li>&#8226; Created a pull-down navigation menu</li>
+						<li>&#8226; Adjusted positioning of the photos</li>
+					</ul>
+				</li>
+				<li>Home/Index
+					<ul>
+						<li>&#8226; Added a table of airplane information</li>
+					</ul>
+				</li>
+				<li>Allies
+					<ul>
+						<li>&#8226; Adjusted the layout of the information</li>
+					</ul>
+				</li>
+				<li>Axis
+					<ul>
+						<li>&#8226; Created page</li>
+						<li>&#8226; Added individual airplane info</li>
+					</ul>
+				</li>
+				<li>About
+					<ul>
+						<li>&#8226; Added this entry</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<blockquote id="DDE_quote">
+				<p>"Because, therefore, we are defending a way of life, 
+				we must be respectful of that way of life as we proceed to the solution of our problem. 
+				We must not violate its principles and its precepts, and we must not destroy 
+				from within what we are trying to defend from without."</p>
+				<cite>Dwight D. Eisenhower. From the <a href="https://www.eisenhower.archives.gov/index.html" target="_blank">Eisenhower archives</a></cite>
+			</blockquote>
+		</article>
+		
+		<footer>
+			<p>So this footer is underneath.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,422 @@
+@charset "UTF-8";
+
+/*
+	Author: 	David McCracken
+	Assignment:	Project V3
+	Created:	02/12/19
+	
+	Filename: styles.css
+*/
+
+@font-face {
+	font-family: 'Corona 3';
+	src: url('Corona 3 Typewriter.ttf') format('truetype');
+}
+@font-face {
+	font-family: Underwood;
+	src: url('MyUnderwood.ttf') format('truetype');
+}
+@font-face {
+	font-family: Handwriting;
+	src: url('Otto.ttf') format('truetype');
+}
+
+
+/*HTML and BODY*/
+html {
+	background-color: rgb(244, 243, 240);
+	background-color: hsl(25, 75%, 25%);
+	background-image: url("desk_top.jpg");
+	font-family: 'Corona 3', monospace;
+	font-size: 16pt;
+	font-weight: normal;
+}
+
+/*
+	Applies a box shadow to both sides of the body. The gradient creates a semi-metallic look.
+*/
+body {
+	background: linear-gradient(90deg, rgb(45, 56, 24) 5%, rgb(85, 96, 64) 95%, rgb(45, 56, 24));
+	-moz-box-shadow: rgba(0, 0, 0, 0.6) 15px 0px 10px, rgba(0, 0, 0, 0.6) -15px 0px 10px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.6) 15px 0px 10px, rgba(0, 0, 0, 0.6) -15px 0px 10px;
+	box-shadow: rgba(0, 0, 0, 0.6) 15px 0px 10px, rgba(0, 0, 0, 0.6) -15px 0px 10px;
+}
+
+/*HEADER and FOOTER*/
+/*
+	The gradient creates a semi-metallic look by applying a four-stage gradient. The gradient is practically made
+	up of three parts; the second color in the gradient simply shortens the light color applied in the first.
+*/
+header {
+	background-color: rgb(135, 146, 114);
+	background: -moz-linear-gradient(178deg, rgb(185, 196, 164) 5%, 
+										rgb(135, 146, 114) 20%, 
+										rgb(135, 146, 114) 85%, 
+										rgb(85, 96, 64));
+	background: -webkit-linear-gradient(178deg, rgb(185, 196, 164) 5%, 
+										rgb(135, 146, 114) 20%, 
+										rgb(135, 146, 114) 85%, 
+										rgb(85, 96, 64));
+	background: -o-linear-gradient(178deg, rgb(185, 196, 164) 5%, 
+										rgb(135, 146, 114) 20%, 
+										rgb(135, 146, 114) 85%, 
+										rgb(85, 96, 64));
+	background: linear-gradient(178deg, rgb(185, 196, 164) 5%, 
+										rgb(135, 146, 114) 20%, 
+										rgb(135, 146, 114) 85%, 
+										rgb(85, 96, 64));
+	border-top-left-radius: 8% 50%;
+	border-top-right-radius: 8% 50%;
+	line-height: 1.2em;
+	text-align: center;
+}
+
+/*
+	The first two text-shadows create an embossed look and the third gives it all a shadow.
+*/
+header h1#webname {
+	color: rgb(204, 210, 192);
+	text-shadow: rgba(0, 32, 0, 0.6) 3px 3px 1px, 
+				 rgba(255, 255, 255, 0.6) -3px -3px 1px, 
+				 rgba(0, 0, 0, 0.6) 5px 5px 5px;
+	line-height: 1em;
+}
+
+/*
+	The gradient creates a semi-metallic look by applying a three-stage gradient.
+	It looks a little less matte than the header.
+*/
+footer {
+	background-color: rgb(145, 156, 124);
+	background: -moz-linear-gradient(160deg, rgb(195, 206, 174) 10%, 
+										rgb(145, 156, 124) 70%, 
+										rgb(95, 106, 74));
+	background: -webkit-linear-gradient(160deg, rgb(195, 206, 174) 10%, 
+										rgb(145, 156, 124) 70%, 
+										rgb(95, 106, 74));
+	background: -o-linear-gradient(160deg, rgb(195, 206, 174) 10%, 
+										rgb(145, 156, 124) 70%, 
+										rgb(95, 106, 74));
+	background: linear-gradient(160deg, rgb(195, 206, 174) 10%, 
+										rgb(145, 156, 124) 70%, 
+										rgb(95, 106, 74));
+	-moz-border-top-left-radius: 8% 50%;
+	-moz-border-top-right-radius: 8% 50%;
+	-webkit-border-top-left-radius: 8% 50%;
+	-webkit-border-top-right-radius: 8% 50%;
+	border-top-left-radius: 8% 50%;
+	border-top-right-radius: 8% 50%;
+	color: rgb(155, 166, 134);
+	text-align: center;
+	text-shadow: rgba(0, 32, 0, 0.6) -1px -1px 1px, 
+	rgba(255, 255, 255, 0.6) 1px 1px 1px;
+}
+
+/*GENERAL*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 3em;
+	padding: 1em 0.25em;
+}
+
+h2 {
+	font-size: 2em;
+	padding: 0.7em 0.25em;
+}
+
+h3 {
+	font-size: 1.5em;
+	padding: 0.3em 0;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+p a:link {
+	color: rgb(255, 0, 0);
+}
+
+p a:active, p a:hover {
+	color: rgb(255, 159, 63);
+}
+
+li {
+	text-decoration: none;
+}
+
+cite {
+	font-style: normal;
+	text-decoration: none;
+}
+
+cite a:link {
+	color: rgb(255, 0, 0);
+}
+
+cite a:active, cite a:hover {
+	color: rgb(255, 159, 63);
+}
+
+cite.imgsrc {
+	font-size: 0.7em;
+}
+
+cite::before, cite::after {
+	content: "-";
+}
+
+/*ARTICLE and BLOCKQUOTE*/
+article {
+	background-color: rgb(244, 243, 240);
+}
+
+article#plane_list {
+	font-family: Underwood; /*Easier to read than Corona 3*/
+	font-size: 0.7em;
+	height: 68vh;
+	overflow: auto;
+}
+
+article#plane_list figcaption {
+	font-size: 0.8em;
+}
+
+article#plane_list figcaption cite:first-child {
+	font-size: 1.2em;
+}
+
+article h2 {
+	background-color: rgb(237, 233, 222);
+	background-color: hsl(45, 29%, 90%);
+	text-align: center;
+}
+
+article h3 {
+	text-align: left;
+}
+
+blockquote {
+	background-color: rgb(237, 233, 222);
+	background-color: hsl(45, 29%, 90%);
+	font-family: Handwriting, script;
+}
+
+blockquote#DDE_quote {
+	background-image: url(dde_paper_b.png);
+	font-size: 32pt;
+	opacity: 0.9;
+}
+
+/*DIV*/
+div.airplane_div > h3 {
+	background-color: rgb(234, 233, 220);
+}
+
+div.airplane_div ul, div.airplane_div p {
+	font-size: 1.3em;
+}
+
+div#right_side {
+	background-color: rgb(237, 233, 222);
+	background-color: hsl(45, 29%, 90%);
+}
+
+/*FIGURE and ASIDE*/
+figure.airplane_inf {
+	background-color: white;
+}
+
+figure#photo, figure#about_photo {
+	background-color: white;
+	background: -moz-linear-gradient(165deg, white 80%, lightgray);
+	background: -webkit-linear-gradient(165deg, white 80%, lightgray);
+	background: -o-linear-gradient(165deg, white 80%, lightgray);
+	background: linear-gradient(165deg, white 80%, lightgray);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.6) 10px 5px 5px;
+	box-shadow: rgba(0, 0, 0, 0.6) 10px 5px 5px;
+}
+
+figure#photo figcaption, figure#about_photo figcaption {
+	font-family: Handwriting, script;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+figure#photo img, figure#about_photo img, figure#dde_photo img {
+	opacity: 0.9;
+}
+
+figure#dde_photo  {
+	background-color: white;
+	background: -moz-linear-gradient(165deg, white 80%, lightgray);
+	background: -webkit-linear-gradient(175deg, white 80%, lightgray);
+	background: -o-linear-gradient(175deg, white 80%, lightgray);
+	background: linear-gradient(175deg, white 80%, lightgray);
+	box-shadow: rgba(0, 0, 0, 0.6) 15px 5px 5px 5px;
+}
+
+figure#dde_photo figcaption {
+	font-family: Handwriting, script;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+/*
+	Little worthless thing that keeps div#right_side from collapsing.
+*/
+figure#dde_photo::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/*LIST*/
+ul, li {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+/*NAVIGATION*/
+nav {
+	background-color: rgb(237, 233, 222);
+	background-color: hsl(45, 29%, 90%);
+}
+
+nav#internal a#navButton {
+	display: none;
+}
+
+nav#internal li#current_page {
+	background-color: rgb(237, 233, 222);
+	background-color: hsl(45, 29%, 90%);
+	color: grey;
+}
+
+nav#internal li {
+	background-color: rgb(186, 182, 171);
+	background-color: hsl(45, 29%, 70%);
+	font-size: 1.5em;
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: rgb(133, 122, 71);
+	color: hsl(50, 30%, 40%);
+}
+
+/*TABLE*/
+/*M6LO7 Demonstrate how to format a table with CSS
+	
+	
+*/
+table caption {
+	background-color: rgb(237, 233, 222);
+}
+
+table#timeline {
+	background: white;
+	border: solid white;
+	border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+}
+
+table#timeline tr, th, td {
+	border: 2px solid black;
+	vertical-align: top;
+}
+
+table#timeline col#firstCol, table#timeline tr#yearRow {
+	background-color: rgb(237, 233, 222);
+}
+
+table#timeline col#firstCol {
+	width: 10%;
+}
+
+table#timeline col.otherCols {
+	width: 15%;
+}
+
+table#timeline th.theatre {
+	background-color: rgb(237, 233, 222);
+}
+
+table#timeline td.airplane {
+	background-color: rgb(244, 243, 240);
+}
+
+
+table#timeline th {
+	color: red;
+}
+
+
+
+
+
+
+
+
+
+/* UNDERWOOD
+My Underwood is (c) 2009 Tension Type
+
+By downloading and/or installing a Tension Type Free Font you agree to this licence:
+
+This Tension Type Free Font is free to use in any and all of your personal and commercial work.
+
+A donation is much appreciated, but not necessary (donations may be done through PayPal to: mtension@gmail.com). No donation is too small.
+
+You may install and use an unlimited number of copies of a Tension Type Free Font.
+
+Reproduction and Distribution. You may reproduce and distribute an unlimited number of copies of a Tension Type Free Font; provided that each copy shall be a true and complete copy, including all copyright and trademark notices (if applicable), and shall be accompanied by a copy of this text file. Copies of the Font may not be distributed for profit either on a standalone basis or included as part of your own product unless by prior permission of Tension Type.
+
+You may not rename, edit or create any derivative works from a Tension Type Free Font, other than subsetting when embedding them in documents unless you have permission from Tension Type.
+
+Embedding a Tension Type Free Font in a PDF document and web pages is allowed.
+
+Michael Tension and Tension Type are not responsible for any damage resulting from the use of this Tension Type Free Font.
+
+Any questions, or if you wish to share your designs, please contact Michael Tension: mtension@gmail.com
+
+Thanks a ton,
+Michael Tension
+
+
+*/
+/* HANDWRITING
+Thank you for downloading this font!
+
+This freeware font is the property of Kevin Richey.  © 2009. All rights reserved.
+
+This font may be used for any commercial and non-commercial use.  Feel free to pass it along, but please include this document.  I also ask that you send me an email to let me know what you think of it and where you got it (just so I know where it is floating around).  I would very much appreciate it.
+
+Kevin Richey is not liable for any damages or loss, including, but not limited to, damages from loss of business profit, business interruption, and loss of business information, due to the use of this product, or inability to use this product.  This font is a Freeware product and not intended for sale.  By installing this font, you have agreed to the above terms. 
+
+Thanks again and keep creating!!
+
+Kevin
+
+email: logan_kruger@hotmail.com
+
+*/
+/* HTML BACKGROUND IMAGE
+Found at pexels.com
+Uploaded by rawpixel.com
+
+License from https://www.pexels.com/photo-license/  as of 02/02/2019
+
+    All photos on Pexels can be used for free for commercial and noncommercial use.
+    Attribution is not required. Giving credit to the photographer or Pexels is not necessary but always appreciated.
+    You can modify the photos. Be creative and edit the photos as you like.
+
+*/

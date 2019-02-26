@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/*
+	Author: 	David McCracken
+	Assignment:	Project V3
+	Created:	02/12/19
+	
+	Filename: reset.css
+*/
+
+
+/*STRUCTURAL*/
+article, aside, figure, figcaption, header, footer, div, blockquote, ul, ol {
+	display: block;
+}
+
+/*TYPOGRAPHICAL*/
+article, aside, figure, figcaption, footer, header, div, blockquote,
+ul, ol, li, img, cite, dl, dt, dd h1, h2, h3, h4, h5, h6, p, a {
+	background: transparent;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+ul {
+	list-style: none;
+	list-style-image: none;
+}
+
+a {
+	text-decoration: none;
+}
