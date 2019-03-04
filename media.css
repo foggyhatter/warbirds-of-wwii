@@ -2,8 +2,8 @@
 
 /*
 	Author: 	David McCracken
-	Assignment:	Project V3
-	Created:	02/18/19
+	Assignment:	Project V4
+	Created:	02/28/19
 	
 	Filename: media.css
 */
@@ -22,27 +22,7 @@
 	}
 }
 
-/*M5LO3 Use media queries to format a page differently for phones vs. PCs. 
-	
-	The media query below is applied only to devices that have a screen that is at most 864 pixels in width.
-	The overall effects of the rules it contains is to cut the fat; it removes the empty right divison,
-	moves the list of source links to below the article elements, and puts the navigation links in
-	a drop-down menu. It also removes the scrolling overflow effect from the allies and axis webpages
-	and applies a more mobile-friendly layout to the tables on those pages.
-*/
 @media screen and (max-width: 864px) {
-	/*M5LO5 Demonstrate the use of flexboxes on a web page 
-		
-		In this mobile view, the entire body element is given a flex layout display property.
-		This flexbox layout allows me to place the elements within the body in one neat column.
-		It also allowed me to place the source links underneath the main website content,
-		which was necessary for readability. 
-	*/
-	/*M5LO7 Demonstrate use of properties of flexbox containers 
-		
-		The flex-flow property applied below aligns the elements within the body into one column,
-		making it easier to read on vertical mobile screens. The nowrap value does nothing in this case.
-	*/
 	body {
 		display: -ms-flex;
 		display: -moz-flex;
@@ -51,31 +31,29 @@
 		flex-flow: column nowrap;
 	}
 	
+	nav#internal ul {
+		display: none;
+		position: relative;
+		width: 100%;
+	}
+	
+	nav#internal li, nav#internal li#current_page {
+		box-shadow: none;
+		font-size: 1.5em;
+		width: 100%;
+		margin: 0;
+	}
+	
 	nav#internal a#navButton {
+		background-color: rgb(201, 190, 156);
+		background-color: hsl(45, 29%, 70%);
 		display: block;
 	}
-		
-	/*M5LO4 Use CSS for pull down menus 
-		
-		Lovely little thing that makes the menu appear.
-	*/
+	
 	nav#internal a#navButton:hover + ul, a#navButton + ul:hover {
 		display: block;
 	}
 	
-	nav#internal ul {
-		display: none;
-		position: absolute;
-		width: 100%;
-	}
-	
-	/*M5LO6 Demonstrate use of properties of flexbox items 
-		
-		The rule below sets the order property of the source navigation list to 99.
-		This, coupled with one below that sets the footer's order to 100, allows me to 
-		reposition this list to be under the main article content, so that the viewer
-		doesn't have to look through it on every page.
-	*/
 	nav#source {
 		display: block;
 		order: 99;
@@ -116,6 +94,11 @@
 		position: absolute;
 		left: 60%;
 	}
+	
+	input#submitButton {
+		width: 100%;
+	}
+
 	
 	blockquote#DDE_quote {
 		position: static;

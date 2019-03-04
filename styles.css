@@ -2,8 +2,8 @@
 
 /*
 	Author: 	David McCracken
-	Assignment:	Project V3
-	Created:	02/12/19
+	Assignment:	Project V4
+	Created:	02/28/19
 	
 	Filename: styles.css
 */
@@ -36,7 +36,7 @@ html {
 	Applies a box shadow to both sides of the body. The gradient creates a semi-metallic look.
 */
 body {
-	background: linear-gradient(90deg, rgb(45, 56, 24) 5%, rgb(85, 96, 64) 95%, rgb(45, 56, 24));
+	background: rgb(78, 64, 25);
 	-moz-box-shadow: rgba(0, 0, 0, 0.6) 15px 0px 10px, rgba(0, 0, 0, 0.6) -15px 0px 10px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.6) 15px 0px 10px, rgba(0, 0, 0, 0.6) -15px 0px 10px;
 	box-shadow: rgba(0, 0, 0, 0.6) 15px 0px 10px, rgba(0, 0, 0, 0.6) -15px 0px 10px;
@@ -49,22 +49,10 @@ body {
 */
 header {
 	background-color: rgb(135, 146, 114);
-	background: -moz-linear-gradient(178deg, rgb(185, 196, 164) 5%, 
-										rgb(135, 146, 114) 20%, 
-										rgb(135, 146, 114) 85%, 
-										rgb(85, 96, 64));
-	background: -webkit-linear-gradient(178deg, rgb(185, 196, 164) 5%, 
-										rgb(135, 146, 114) 20%, 
-										rgb(135, 146, 114) 85%, 
-										rgb(85, 96, 64));
-	background: -o-linear-gradient(178deg, rgb(185, 196, 164) 5%, 
-										rgb(135, 146, 114) 20%, 
-										rgb(135, 146, 114) 85%, 
-										rgb(85, 96, 64));
-	background: linear-gradient(178deg, rgb(185, 196, 164) 5%, 
-										rgb(135, 146, 114) 20%, 
-										rgb(135, 146, 114) 85%, 
-										rgb(85, 96, 64));
+	background: -moz-linear-gradient(174deg, rgb(185, 196, 164) 5%, rgb(135, 146, 114) 20%);
+	background: -webkit-linear-gradient(174deg, rgb(185, 196, 164) 5%, rgb(135, 146, 114) 20%);
+	background: -o-linear-gradient(174deg, rgb(185, 196, 164) 5%, rgb(135, 146, 114) 20%);
+	background: linear-gradient(174deg, rgb(185, 196, 164) 5%, rgb(135, 146, 114) 20%);
 	border-top-left-radius: 8% 50%;
 	border-top-right-radius: 8% 50%;
 	line-height: 1.2em;
@@ -174,21 +162,6 @@ article {
 	background-color: rgb(244, 243, 240);
 }
 
-article#plane_list {
-	font-family: Underwood; /*Easier to read than Corona 3*/
-	font-size: 0.7em;
-	height: 68vh;
-	overflow: auto;
-}
-
-article#plane_list figcaption {
-	font-size: 0.8em;
-}
-
-article#plane_list figcaption cite:first-child {
-	font-size: 1.2em;
-}
-
 article h2 {
 	background-color: rgb(237, 233, 222);
 	background-color: hsl(45, 29%, 90%);
@@ -211,7 +184,22 @@ blockquote#DDE_quote {
 	opacity: 0.9;
 }
 
-/*DIV*/
+/*DIV and FORM*/
+div#plane_list {
+	font-family: Underwood; /*Easier to read than Corona 3*/
+	font-size: 0.7em;
+	height: 68vh;
+	overflow: auto;
+}
+
+div#plane_list figcaption {
+	font-size: 0.8em;
+}
+
+div#plane_list figcaption cite:first-child {
+	font-size: 1.2em;
+}
+
 div.airplane_div > h3 {
 	background-color: rgb(234, 233, 220);
 }
@@ -223,6 +211,41 @@ div.airplane_div ul, div.airplane_div p {
 div#right_side {
 	background-color: rgb(237, 233, 222);
 	background-color: hsl(45, 29%, 90%);
+}
+
+/*M7LO11 Demonstrate how to format a form with CSS (group your form styles together in your CSS file, and document their overall impact on the form)
+	These style rules below add a 2px dashed border to the fieldsets in the form element,
+	darken the background of the form element itself, and change the appearance of the submit button.
+	All together, these create a simple, straight-edge style that is just a little out of place
+	with the rest of the website.
+*/
+
+form {
+	background-color: rgb(237, 233, 222);
+}
+
+fieldset {
+	border: 2px dashed black;
+}
+
+fieldset input, fieldset textarea {
+	border: 2px solid black;
+}
+
+fieldset#bottomSet {
+	border-top: none;
+}
+
+input#submitButton {
+	background-color: rgb(237, 233, 222);
+	border: 2px solid black;
+	font-family: Underwood, sans-serif;
+	font-size: 1em;
+	margin-top: 10px;
+}
+
+input#submitButton:active, input#submitButton:hover {
+	background-color: rgb(217, 213, 202);
 }
 
 /*FIGURE and ASIDE*/
@@ -243,6 +266,22 @@ figure#photo, figure#about_photo {
 figure#photo figcaption, figure#about_photo figcaption {
 	font-family: Handwriting, script;
 	font-size: 1.5em;
+	text-align: center;
+	transition: font-size 1s;
+}
+
+figure#photo p {
+	font-size: 0.9em;
+	transition: font-size 1s;
+}
+
+figure#photo:hover p {
+	font-size: 1.25em;
+}
+
+figure#photo:hover figcaption {
+	font-family: Handwriting, script;
+	font-size: 2.1em;
 	text-align: center;
 }
 
@@ -286,20 +325,30 @@ nav {
 	background-color: hsl(45, 29%, 90%);
 }
 
+nav#internal {
+	background-color: rgb(135, 146, 114);
+}
+
 nav#internal a#navButton {
 	display: none;
+}
+
+nav#internal li {
+	background-color: rgb(201, 190, 156);
+	background-color: hsl(45, 29%, 70%);
+	box-shadow: rgba(0, 0, 0, 0.6) 3px 7px 5px 5px;
+	font-size: 1.5em;
 }
 
 nav#internal li#current_page {
 	background-color: rgb(237, 233, 222);
 	background-color: hsl(45, 29%, 90%);
+	box-shadow: rgba(0, 0, 0, 0.5) 4px 11px 5px 7px;
 	color: grey;
 }
 
-nav#internal li {
-	background-color: rgb(186, 182, 171);
-	background-color: hsl(45, 29%, 70%);
-	font-size: 1.5em;
+nav#internal li a {
+	display: block;
 }
 
 a:link {
@@ -313,17 +362,16 @@ a:hover, a:active {
 }
 
 /*TABLE*/
-/*M6LO7 Demonstrate how to format a table with CSS
-	
-	
-*/
 table caption {
 	background-color: rgb(237, 233, 222);
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
 }
 
 table#timeline {
 	background: white;
-	border: solid white;
+	border: 2px solid black;
 	border-collapse: collapse;
 	text-align: left;
 	width: 100%;
